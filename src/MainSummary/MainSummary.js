@@ -2,11 +2,6 @@ import React from 'react';
 import './MainSummary.css';
 import FeatureSummary from '../FeatureSummary/FeatureSummary';
 
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-});
-
 class MainSummary extends React.Component {
   render() {
     const featureSummaries = Object.keys(this.props.selectedFeatures).map((feature, idx) => {
@@ -18,6 +13,7 @@ class MainSummary extends React.Component {
           key={featureHash}
           feature={feature}
           selectedOption={selectedOption}
+          formatUSCurrency={this.props.formatUSCurrency}
         />
       )
     });
@@ -34,7 +30,7 @@ class MainSummary extends React.Component {
         <div className="summary__total">
           <div className="summary__total__label">Total</div>
           <div className="summary__total__value">
-            {USCurrencyFormat.format(total)}
+            {this.props.formatUSCurrency(total)}
           </div>
         </div>
       </section>

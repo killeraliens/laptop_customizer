@@ -34,6 +34,14 @@ class App extends Component {
     });
   };
 
+  formatUSCurrency = (amount) => {
+    const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    });
+    return USCurrencyFormat.format(amount);
+  }
+
   render() {
 
     return (
@@ -46,9 +54,11 @@ class App extends Component {
             features={this.props.features}
             selectedFeatures={this.state.selected}
             updateFeature={this.updateFeature}
+            formatUSCurrency={this.formatUSCurrency}
           />
           <MainSummary
             selectedFeatures={this.state.selected}
+            formatUSCurrency={this.formatUSCurrency}
           />
         </main>
       </div>

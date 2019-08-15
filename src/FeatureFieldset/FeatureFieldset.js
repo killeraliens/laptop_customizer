@@ -15,7 +15,9 @@ class FeatureFieldset extends React.Component {
           feature={this.props.feature}
           item={item}
           selectedFeatures={this.props.selectedFeatures}
-          updateFeature={this.props.updateFeature}/>
+          updateFeature={this.props.updateFeature}
+          formatUSCurrency={this.props.formatUSCurrency}
+        />
       )
     });
 

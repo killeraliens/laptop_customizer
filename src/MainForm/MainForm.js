@@ -16,6 +16,7 @@ class MainForm extends React.Component {
           key={featureHash}
           selectedFeatures={this.props.selectedFeatures}
           updateFeature={this.props.updateFeature}
+          formatUSCurrency={this.props.formatUSCurrency}
         />
       )
     });
