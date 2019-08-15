@@ -29,4 +29,8 @@ class MainForm extends React.Component {
   }
 }
 
+MainForm.defaultProps = {
+  features: []
+};
+
 export default MainForm;
