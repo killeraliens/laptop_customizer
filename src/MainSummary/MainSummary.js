@@ -1,4 +1,5 @@
 import React from 'react';
+import './MainSummary.css';
 import FeatureSummary from '../FeatureSummary/FeatureSummary';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {

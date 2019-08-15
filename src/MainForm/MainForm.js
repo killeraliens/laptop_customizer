@@ -1,4 +1,5 @@
 import React from 'react';
+import './MainForm.css';
 import FeatureFieldset from '../FeatureFieldset/FeatureFieldset';
 
 

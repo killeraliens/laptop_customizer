@@ -1,4 +1,5 @@
 import React from 'react';
+import './FeatureFieldset.css';
 import slugify from 'slugify';
 import FeatureOption from '../FeatureOption/FeatureOption';
 
